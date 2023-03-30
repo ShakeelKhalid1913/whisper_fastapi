@@ -7,6 +7,7 @@ type = 'small'
 model = whisper.load_model(type)
 
 def audio_to_text(filename):
+    print("Converting audio to text... Please wait.")
     result = model.transcribe(filename)
     os.remove(filename)
     text = result["text"]
